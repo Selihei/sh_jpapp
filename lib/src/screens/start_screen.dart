@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sh_jpapp/src/screens/home_screen.dart';
 
 class StartScreen extends StatelessWidget {
   @override
@@ -32,21 +35,48 @@ class StartScreen extends StatelessWidget {
                     Paint textPaint = Paint();
                     textPaint.style = PaintingStyle.stroke;
                     textPaint.strokeWidth = 2;
-                    textPaint.color = Color(0x66FFFFFF);
+                    textPaint.color = Color(0x80FFFFFF);
                     
-                
                   return Text(
                     "CK SNACK",
                     style: GoogleFonts.roboto(
                       fontSize: 100,
                       fontWeight: FontWeight.bold,
                     foreground: textPaint,
-                      
                     ),
                   );
                   }
                   )
                 ),
+                Positioned(
+                  left: 150,
+bottom: 0,
+                  child:
+                  ClipRRect(
+  borderRadius: BorderRadius.circular(20),
+  child: BackdropFilter(
+    filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+    child: Container(
+      width: 325,
+      height: 200,
+      padding: EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Color(0x03FFFFFF),
+        borderRadius: BorderRadius.circular(28),
+        border: Border.all(
+          color: Color(0x4DFFFFFF),
+        ),
+      ),
+      child: Column(
+        children: [
+          Text("Test", style:TextStyle(color: Colors.white),),
+        ],
+      ),
+                )
+  )           
+                  )
+                )
+                 
               ],
             ),
           ),
