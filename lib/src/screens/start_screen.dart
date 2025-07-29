@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
-class SnackScreen extends StatelessWidget {
+class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: null,
+      body: Stack(
+    children: [
+      Positioned.fill(
+        child: Image.asset(
+          'assets/images/bg/bg_startscreen.png',
+          fit: BoxFit.cover,
+        ),
+      ),
+    ],
+      )
     );
   }
   }
