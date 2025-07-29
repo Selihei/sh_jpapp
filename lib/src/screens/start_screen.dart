@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
   @override
@@ -24,17 +25,27 @@ class StartScreen extends StatelessWidget {
                   width: 750,
                   height: 750,
                 ),
+
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 80, left: 30), 
-                  child: Text(
-                    "CH SNACK",
-                    style: TextStyle(
-                      fontSize: 48,
+                  padding: const EdgeInsets.only(bottom: 150, right: 70), 
+                  child: Builder(builder: (context){
+                    Paint textPaint = Paint();
+                    textPaint.style = PaintingStyle.stroke;
+                    textPaint.strokeWidth = 2;
+                    textPaint.color = Color(0x66FFFFFF);
+                    
+                
+                  return Text(
+                    "CK SNACK",
+                    style: GoogleFonts.roboto(
+                      fontSize: 100,
                       fontWeight: FontWeight.bold,
-                      color: Colors.transparent,
+                    foreground: textPaint,
                       
                     ),
-                  ),
+                  );
+                  }
+                  )
                 ),
               ],
             ),
