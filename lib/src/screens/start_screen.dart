@@ -97,8 +97,8 @@ class StartScreen extends StatelessWidget {
                                 );
                               },
                               child: Container(
-                                width: 170,
-                                height: 50,
+                                width: 190,
+                                height: 45,
                                 padding: EdgeInsets.all(2.5), // "Border"-Dicke
                                 decoration: BoxDecoration(
                                   gradient: LinearGradient(
@@ -145,7 +145,7 @@ class StartScreen extends StatelessWidget {
                                     'Order Now',
                                     style: GoogleFonts.roboto(
                                       fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w400,
                                       color: Colors.white,
                                     ),
                                   ),
