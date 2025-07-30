@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
     children: [
       Positioned.fill(
         child: Image.asset(
-          'assets/bg_startscreen.png',
+          'assets/images/bg/bg_mainscreen.png',
           fit: BoxFit.cover,
         ),
       ),

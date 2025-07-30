@@ -48,23 +48,20 @@ class StartScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                Positioned(
-                  left: 150,
-                  bottom: -25,
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 0, right: 130),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(25),
                     child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Container(
                         width: 325,
-                        height: 220,
+                        height: 200,
                         padding: EdgeInsets.all(24),
                         decoration: BoxDecoration(
                           color: Color(0x03FFFFFF),
                           borderRadius: BorderRadius.circular(25),
-                          border: Border.all(
-                            color: Colors.transparent, //Color(0x4DFFFFFF)
-                          ),
+                          border: Border.all(color: Color(0x26FFFFFF)),
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -88,6 +85,72 @@ class StartScreen extends StatelessWidget {
                                 color: Color(0x80FFFFFF),
                               ),
                               textAlign: TextAlign.center,
+                            ),
+                            SizedBox(height: 20),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => HomeScreen(),
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                width: 170,
+                                height: 50,
+                                padding: EdgeInsets.all(2.5), // "Border"-Dicke
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color(0xFFE970C4),
+                                      Color(0xFFF69EA3),
+                                    ],
+                                  ),
+                                  borderRadius: BorderRadius.circular(13),
+                                ),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Color(0xFFE970C4),
+                                        Color(0xFFF69EA3),
+                                      ],
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurStyle: BlurStyle.inner,
+                                        color: Color(0xFFFFACE4),
+                                        blurRadius: 1,
+                                        offset: Offset(3, -3),
+                                      ),
+                                      BoxShadow(
+                                        blurStyle: BlurStyle.inner,
+                                        color: Color(0xFF9375B6),
+                                        blurRadius: 5,
+                                        offset: Offset(-1, 2),
+                                      ),
+                                      BoxShadow(
+                                        //unterer Shadow
+                                        color: Color(0x80EA71C5),
+                                        blurRadius: 30,
+                                        spreadRadius: 5,
+                                        offset: Offset(2.4, 8),
+                                      ),
+                                    ],
+                                    borderRadius: BorderRadius.circular(13),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Order Now',
+                                    style: GoogleFonts.roboto(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
