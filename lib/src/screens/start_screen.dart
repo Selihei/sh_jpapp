@@ -69,7 +69,7 @@ class StartScreen extends StatelessWidget {
                           children: [
                             Text(
                               "Feeling Snackish Today?",
-                              style: GoogleFonts.roboto(
+                              style: GoogleFonts.inter(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
@@ -79,7 +79,7 @@ class StartScreen extends StatelessWidget {
                             SizedBox(height: 3),
                             Text(
                               "Explore Angi's most popular snack selection\nand get instantly happy",
-                              style: GoogleFonts.roboto(
+                              style: GoogleFonts.inter(
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0x80FFFFFF),
@@ -143,7 +143,7 @@ class StartScreen extends StatelessWidget {
                                   alignment: Alignment.center,
                                   child: Text(
                                     'Order Now',
-                                    style: GoogleFonts.roboto(
+                                    style: GoogleFonts.inter(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w400,
                                       color: Colors.white,
