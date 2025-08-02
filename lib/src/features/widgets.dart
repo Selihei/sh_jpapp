@@ -47,12 +47,12 @@ Widget _buildContent() {
             "All categories",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 14,
+              fontSize: 15,
               fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(width: 6),
-          const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.white, size: 16),
+          const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.white, size: 20),
         ],
       );
     } else {
@@ -64,7 +64,10 @@ Widget _buildContent() {
             color: isSelected
              ? Colors.black
              : Colors.white,
-            fontSize: 14,
+            fontSize: 15,
+            fontWeight: isSelected
+             ? FontWeight.bold
+             : FontWeight.w500,
           ),
         ),
       );
