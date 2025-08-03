@@ -148,11 +148,162 @@ class FoodDetailScreen extends StatelessWidget {
                       Positioned(
                         bottom: 0,
                         child: SizedBox(
-                        width: 300,
-                        height: 60,
-                        child: Image.asset("assets/images/icons/ingriendents.png"),
-                      ))
+                          width: 300,
+                          height: 60,
+                          child: Image.asset(
+                            "assets/images/icons/ingriendents.png",
+                          ),
+                        ),
+                      ),
                     ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 140,
+            left: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Color(0xFF424445),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      bottomLeft: Radius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Small',
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  color: Color(0xFF424445),
+                  child: const Text(
+                    'Medium',
+                    style: TextStyle(color: Colors.grey, fontSize: 13),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Color(0xFF636563),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(8),
+                      bottomRight: Radius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Large',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 140,
+            right: 25,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.grey, width: 1.5),
+                  ),
+                  child: Icon(Icons.remove, color: Colors.grey, size: 20),
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  '1',
+                  style: GoogleFonts.inter(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Container(
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.grey, width: 1.5),
+                  ),
+                  child: Icon(Icons.add, color: Colors.grey, size: 20),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 50,
+            left: 35,
+            child: Container(
+              width: 350,
+              height: 50,
+              padding: EdgeInsets.all(3.5),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xFFE970C4), Color(0xFFF69EA3)],
+                ),
+                borderRadius: BorderRadius.circular(13),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xFFE970C4), Color(0xFFF69EA3)],
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      blurStyle: BlurStyle.inner,
+                      color: Color(0xFFFFACE4),
+                      blurRadius: 1,
+                      offset: Offset(3, -3),
+                    ),
+                    BoxShadow(
+                      blurStyle: BlurStyle.inner,
+                      color: Color(0xFF9375B6),
+                      blurRadius: 5,
+                      offset: Offset(-1, 2),
+                    ),
+                    BoxShadow(
+                      //unterer Shadow
+                      color: Color(0x80EA71C5),
+                      blurRadius: 30,
+                      spreadRadius: 5,
+                      offset: Offset(2.4, 8),
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(13),
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  'Add to Order for ${item.price}',
+                  style: GoogleFonts.inter(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
                   ),
                 ),
               ),

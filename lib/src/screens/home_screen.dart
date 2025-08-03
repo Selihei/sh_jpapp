@@ -161,7 +161,7 @@ class HomeScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: RadialGradient(
                     colors: [Color(0xFFBB8DE1), Color(0xFF908CF5)],
-                    radius: 2
+                    radius: 2,
                   ),
                   borderRadius: BorderRadius.circular(13),
                   boxShadow: [
@@ -199,44 +199,46 @@ class HomeScreen extends StatelessWidget {
           Positioned(
             bottom: 330,
             left: 25,
-            child: Text("We Recommend", 
-          style: GoogleFonts.inter(
-            color: Colors.white,
-            fontWeight: FontWeight.w800,
-            fontSize: 18,
-            ),)),
-             Positioned(
-          bottom: 70,
-          left: 0,
-          right: 0,
-          height: 250,
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            physics: const BouncingScrollPhysics(),
-            child: Row(
-              children: FoodItems.map((item) {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => FoodDetailScreen(item: item),
-                      ),
-                    );
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 16),
-                    child: FoodCard(item: item),
-                  ),
-                );
-              }).toList(),
+            child: Text(
+              "We Recommend",
+              style: GoogleFonts.inter(
+                color: Colors.white,
+                fontWeight: FontWeight.w800,
+                fontSize: 18,
+              ),
             ),
           ),
-        ),
-      ],
-    ),
-  );
+          Positioned(
+            bottom: 70,
+            left: 0,
+            right: 0,
+            height: 250,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              physics: const BouncingScrollPhysics(),
+              child: Row(
+                children: FoodItems.map((item) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => FoodDetailScreen(item: item),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: FoodCard(item: item),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
-}
- 

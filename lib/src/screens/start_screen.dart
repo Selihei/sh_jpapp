@@ -99,7 +99,7 @@ class StartScreen extends StatelessWidget {
                               child: Container(
                                 width: 190,
                                 height: 45,
-                                padding: EdgeInsets.all(2.5), 
+                                padding: EdgeInsets.all(2.5),
                                 decoration: BoxDecoration(
                                   gradient: LinearGradient(
                                     colors: [

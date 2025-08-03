@@ -15,7 +15,7 @@ class PillWidget extends StatelessWidget {
     this.variant = 2,
   });
 
- @override
+  @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(25),
@@ -35,14 +35,17 @@ class PillWidget extends StatelessWidget {
       ),
     );
   }
-Widget _buildContent() {
+
+  Widget _buildContent() {
     if (variant == 1) {
       return Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-         Image.asset('assets/images/icons/takeoutbag.and.cup.and.straw.png',
-         width: 15,
-         height: 15,) ,
+          Image.asset(
+            'assets/images/icons/takeoutbag.and.cup.and.straw.png',
+            width: 15,
+            height: 15,
+          ),
           const SizedBox(width: 6),
           const Text(
             "All categories",
@@ -53,7 +56,11 @@ Widget _buildContent() {
             ),
           ),
           const SizedBox(width: 6),
-          const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.white, size: 20),
+          const Icon(
+            Icons.keyboard_arrow_down_rounded,
+            color: Colors.white,
+            size: 20,
+          ),
         ],
       );
     } else {
@@ -62,13 +69,9 @@ Widget _buildContent() {
         child: Text(
           text,
           style: GoogleFonts.inter(
-            color: isSelected
-             ? Colors.black
-             : Colors.white,
+            color: isSelected ? Colors.black : Colors.white,
             fontSize: 15,
-            fontWeight: isSelected
-             ? FontWeight.bold
-             : FontWeight.w500,
+            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
           ),
         ),
       );
@@ -85,17 +88,13 @@ class FoodCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width:185,
+        width: 185,
         height: 350,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Color(0x4DFFFFFF), 
-              Color(0xFF908CF5),
-              Color(0xFF8C5BEA), 
-            ],
+            colors: [Color(0x4DFFFFFF), Color(0xFF908CF5), Color(0xFF8C5BEA)],
           ),
           borderRadius: BorderRadius.circular(20),
         ),
@@ -104,45 +103,63 @@ class FoodCard extends StatelessWidget {
             Positioned(
               left: 15,
               top: 10,
-              child: Image.asset(item.assetPath, width: 150, height: 150), ),
+              child: Image.asset(item.assetPath, width: 150, height: 150),
+            ),
             Positioned(
               bottom: 65,
               left: 15,
-              child: Text(item.title, style: GoogleFonts.inter(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 15
-            ),)),
+              child: Text(
+                item.title,
+                style: GoogleFonts.inter(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
             Positioned(
               left: 15,
               bottom: 50,
-              child: Text(item.sectitle, style: GoogleFonts.inter(
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-              fontSize: 10
-              ),)),
+              child: Text(
+                item.sectitle,
+                style: GoogleFonts.inter(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 10,
+                ),
+              ),
+            ),
             Positioned(
-              left:15,
+              left: 15,
               bottom: 20,
-              child: Text(item.price, style: GoogleFonts.inter(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontSize: 15
-              ),)),
+              child: Text(
+                item.price,
+                style: GoogleFonts.inter(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                ),
+              ),
+            ),
             Positioned(
               bottom: 20,
               right: 15,
-              child: Row(children: [Icon(Icons.favorite_outline,
-             color: Colors.white24,size: 15,), 
-             Text(" "+ item.likes, style: GoogleFonts.inter(
-              color: Colors.white,
-              fontWeight: FontWeight.w200
-              ),) ],))
+              child: Row(
+                children: [
+                  Icon(Icons.favorite_outline, color: Colors.white24, size: 15),
+                  Text(
+                    " " + item.likes,
+                    style: GoogleFonts.inter(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w200,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
-        )
+        ),
       ),
     );
   }
 }
-
-//Button Widget
