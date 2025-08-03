@@ -30,7 +30,7 @@ const List<FoodItem> FoodItems = [
     assetPath: 'assets/images/graphics/cupkake_cat.png',
     title: "Mogli's Cup",
     sectitle: "Strawberry ice cream",
-    price: "8.99",
+    price: "₳ 8.99",
     likes: "200"
   ),
   FoodItem(
@@ -38,7 +38,7 @@ const List<FoodItem> FoodItems = [
     assetPath: 'assets/images/graphics/icecream.png',
     title: "Balu's Cup",
     sectitle: "Pistachio ice cream",
-    price: "8.99",
+    price: "₳ 8.99",
     likes: "165"
   ),
   FoodItem(
@@ -46,7 +46,7 @@ const List<FoodItem> FoodItems = [
     assetPath: 'assets/images/graphics/icecream_stick.png',
     title: "Smiling David",
     sectitle: "Coffee ice cream",
-    price: "3.99",
+    price: "₳ 3.99",
     likes: "310"
   ),
   FoodItem(
@@ -54,7 +54,7 @@ const List<FoodItem> FoodItems = [
     assetPath: 'assets/images/graphics/icecream_cone.png',
     title: "Kai in a Cone",
     sectitle: "Vanilla ice cream",
-    price: "3.99",
+    price: "₳ 3.99",
     likes: "290"
   ),
 ];

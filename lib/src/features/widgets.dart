@@ -85,34 +85,59 @@ class FoodCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 300,
-        height: 180,
+        width:185,
+        height: 350,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
+              Color(0x4DFFFFFF), 
               Color(0xFF908CF5),
               Color(0xFF8C5BEA), 
             ],
           ),
           borderRadius: BorderRadius.circular(20),
-          boxShadow: const [
-            BoxShadow(
-              color: Color(0x80FFFFFF), 
-              offset: Offset(0, -4), 
-              blurRadius: 12,
-              spreadRadius: 1,
-            ),
-          ],
         ),
         child: Stack(
           children: [
-            Positioned(child: Image.asset(item.assetPath)),
-            Positioned(child: Text(item.title)),
-            Positioned(child: Text(item.sectitle)),
-            Positioned(child: Text(item.price)),
-            Positioned(child: Row(children: [Icon(Icons.favorite_outline), Text(item.likes) ],))
+            Positioned(
+              left: 15,
+              top: 10,
+              child: Image.asset(item.assetPath, width: 150, height: 150), ),
+            Positioned(
+              bottom: 65,
+              left: 15,
+              child: Text(item.title, style: GoogleFonts.inter(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 15
+            ),)),
+            Positioned(
+              left: 15,
+              bottom: 50,
+              child: Text(item.sectitle, style: GoogleFonts.inter(
+              color: Colors.white,
+              fontWeight: FontWeight.w400,
+              fontSize: 10
+              ),)),
+            Positioned(
+              left:15,
+              bottom: 20,
+              child: Text(item.price, style: GoogleFonts.inter(
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+              fontSize: 15
+              ),)),
+            Positioned(
+              bottom: 20,
+              right: 15,
+              child: Row(children: [Icon(Icons.favorite_outline,
+             color: Colors.white24,size: 15,), 
+             Text(" "+ item.likes, style: GoogleFonts.inter(
+              color: Colors.white,
+              fontWeight: FontWeight.w200
+              ),) ],))
           ],
         )
       ),
@@ -121,4 +146,3 @@ class FoodCard extends StatelessWidget {
 }
 
 //Button Widget
-//Maybe Card Widget

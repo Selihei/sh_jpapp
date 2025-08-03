@@ -1,7 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sh_jpapp/src/data/products_list.dart';
 import 'package:sh_jpapp/src/features/widgets.dart';
+import 'package:sh_jpapp/src/screens/detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -202,9 +204,39 @@ class HomeScreen extends StatelessWidget {
             color: Colors.white,
             fontWeight: FontWeight.w800,
             fontSize: 18,
-            ),))
-        ],
-      ),
-    );
-  }
+            ),)),
+             Positioned(
+          bottom: 70,
+          left: 0,
+          right: 0,
+          height: 250,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            physics: const BouncingScrollPhysics(),
+            child: Row(
+              children: FoodItems.map((item) {
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => FoodDetailScreen(item: item),
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: FoodCard(item: item),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
+}
+ 
