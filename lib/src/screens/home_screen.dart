@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                                   "4.8",
                                   style: GoogleFonts.inter(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -165,7 +165,7 @@ class HomeScreen extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Color(0xFF9375B6),
-                      blurRadius: 23,
+                      blurRadius: 3,
                       offset: Offset(3, -3),
                     ),
                     BoxShadow(
@@ -194,6 +194,15 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            bottom: 330,
+            left: 25,
+            child: Text("We Recommend", 
+          style: GoogleFonts.inter(
+            color: Colors.white,
+            fontWeight: FontWeight.w800,
+            fontSize: 18,
+            ),))
         ],
       ),
     );
